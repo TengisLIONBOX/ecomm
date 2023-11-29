@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, isLoading, error } = useSWR(
-    "https://fakestoreapi.com/products",
+    "http://localhost:3000/api/products",
     fetcher
   );
   if (isLoading) {

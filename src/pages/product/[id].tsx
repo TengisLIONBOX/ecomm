@@ -8,7 +8,8 @@ export default function ProductDetailPage() {
 
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, isLoading, error } = useSWR(
-    `https://fakestoreapi.com/products/${id}`,
+    `http://localhost:3000/api/products/${id}`,
+
     fetcher
   );
   if (isLoading) {
